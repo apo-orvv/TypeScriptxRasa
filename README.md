@@ -115,36 +115,55 @@ export default CustomWidget;
 | `onWidgetEvent`          | `{}`                 | Calls custom code on a specific widget event (`onChatOpen`, `onChatClose`, `onChatHidden` are available). Add a function to the desired object property in the props to have it react to the event.                                                                                                                                                                                   |
 
 ##### `customMessageDelay`
-```javascript
-(message) => {
-    let delay = message.length * 30;
-    if (delay > 2 * 1000) delay = 3 * 1000;
-    if (delay < 400) delay = 1000;
+```typescript
+const calculateDelay = (message: string): number => {
+    let delay: number = message.length * 30;
+    if (delay > 2 * 1000) {
+        delay = 3 * 1000;
+    }
+    if (delay < 400) {
+        delay = 1000;
+    }
     return delay;
-}
+};
 ```
 
 ##### `onSocketEvent`
-```jsx
-onSocketEvent={{
+```tsx
+interface SocketEventHandlers {
+  'bot_uttered': () => void;
+  'connect': () => void;
+  'disconnect': () => void;
+}
+
+const socketEventHandlers: SocketEventHandlers = {
   'bot_uttered': () => console.log('the bot said something'),
   'connect': () => console.log('connection established'),
   'disconnect': () => doSomeCleanup(),
-}}
+};
 ```
 
 ##### `params`
 
 The `params` props only allows to specify custom image dimensions:
-```jsx
-params={{
-        images: {
-          dims: {
-            width: 300,
-            height: 200
-          }
-        }
-      }}
+```tsx
+interface Params {
+  images: {
+    dims: {
+      width: number;
+      height: number;
+    };
+  };
+}
+
+const params: Params = {
+  images: {
+    dims: {
+      width: 300,
+      height: 200,
+    },
+  },
+};
 ```
 
 ## 3. Customization Options
