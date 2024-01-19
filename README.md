@@ -22,8 +22,8 @@ The Rasa WebChat integration in this React-Typescript project enhances the user 
 - Smart delay between messages
 - Easy import as a script tag or React Component
 - Connects to a RASA server for natural language processing and dialogue management
-- Custom Action Handling: Supports actions like redirecting to URLs or displaying recommended intents as buttons
-- Customizable Styling: CSS available for customizing the chatbot's appearance
+- Custom Action Handling
+- Customizable Styling
 - Recommended Intents as Buttons: Displays clickable buttons for recommended intents, enhancing user experience.
 
 ## 2. Integration Steps
@@ -36,8 +36,9 @@ To run this project, ensure Node.js and RASA are installed on your machine.
 1. Start the RASA server:
    ```bash
    rasa train # to train the RASA model
-   rasa run -m models --enable-api --cors "*" --debug # to run the RASA Web Server
-   rasa run actions # to run the custom actions server
+   rasa run -m models --enable-api --cors "*" # to run the RASA Web Server
+   python server.py # to run the Backend Server
+   rasa run actions # to run the Custom Actions Server
    ```
 
 #### Frontend
@@ -50,10 +51,10 @@ To run this project, ensure Node.js and RASA are installed on your machine.
 
 #### 2.1.1 Install Rasa WebChat Package
 
-Add the Rasa WebChat package to your project by including the following script in your HTML file:
+Add the Rasa WebChat package to your project by including the following script in the file:
 
 ```html
-<!-- Add this script tag to your file -->
+<!-- Add this script tag to the file -->
 <script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.min.js" async></script>
 ```
 
