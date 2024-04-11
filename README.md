@@ -207,13 +207,13 @@ When deploying the chatbot in a production environment, consider scalability con
 
 ## 4. FAQs
 
-## Q: Can I customize the appearance of the chatbot?**  
+## Q: Can I customize the appearance of the chatbot?  
 **A:** Yes, modify the styles in the project's stylesheet to customize the chatbot's appearance.
 
-## Q: How do I handle custom actions from Rasa, such as displaying recommendations?**  
+## Q: How do I handle custom actions from Rasa, such as displaying recommendations?  
 **A:** Modify the `handleCustomAction` method in the React component to customize the behavior of Rasa's custom actions.
 
-## Q: What scalability considerations should I keep in mind for production deployment?**  
+## Q: What scalability considerations should I keep in mind for production deployment? 
 **A:** Consider factors such as model retraining frequency, code optimization, resource management, and model persistence for scalability in a production environment.
 
 ## Q: Can I customize the behavior of the chatbot based on user actions or events?
