@@ -1,4 +1,4 @@
-# Rasa WebChat Integration Guide
+# Rasa WebChat Integration Guide for React-Typescript Projects
 
 ## 1. Overview
 
