@@ -1,6 +1,6 @@
 # Rasa WebChat Integration Guide for React-Typescript Projects
 
-## 1. Overview
+## 1. Overview 
 
 The Rasa WebChat integration in this React-Typescript project enhances the user interface, providing a seamless chatbot experience. This guide outlines the implementation details and customization options for integrating Rasa WebChat into the project.
 
